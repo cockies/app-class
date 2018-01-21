@@ -18,6 +18,9 @@ myFunction();
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+
 ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke();
+    ctx.fillStyle="#0000ff";
+    // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
+    ctx.arc(100,100,20,0,Math.PI*2,true); ctx.closePath();
+    ctx.fill();
