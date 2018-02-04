@@ -32,21 +32,21 @@ function draw3()
          dx2*=-1;
          
     
-    console.log(dx)
-        console.log("out of bounds (horizontal)")
+    //console.log(dx)
+        //console.log("out of bounds (horizontal)")
     }
     
     if (y3 > c.height || y3 < 0){
         dy2*=-1;
-         console.log(dy)
-        console.log("out of bbounds (vertical)")
+       //  console.log(dy)
+       // console.log("out of bbounds (vertical)")
     }
     
  
   ctx.beginPath();
   ctx.fillStyle="#71f442";
   // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-  ctx.arc(x3,y3,20,0,Math.PI*2,true);
+  ctx.arc(x3,y3,10,0,Math.PI*2,true);
   ctx.closePath();
   ctx.fill();
 
@@ -131,7 +131,7 @@ function draw2()
   ctx.beginPath();
   ctx.fillStyle="#f44242";
   // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-  ctx.arc(x2,y2,20,0,Math.PI*2,true);
+  ctx.arc(x2,y2,10,0,Math.PI*2,true);
   ctx.closePath();
   ctx.fill();
 //x2+=dx;
