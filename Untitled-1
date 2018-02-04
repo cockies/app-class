@@ -30,12 +30,11 @@ html{
     width: 60%;
     height: 60%;
     position: absolute;
-    top: 20%;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: white;
-    z-index: 1;
 }
 
     
@@ -61,11 +60,3 @@ input{
     margin: 10px;
 
 }
-.form{
-    background-color: aqua;
-    }
-.dropup{
-    background-color: aqua;
-    
-}
-
