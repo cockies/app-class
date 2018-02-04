@@ -1,3 +1,5 @@
+var x3=0;
+var y3=0;
 var x2=0;
 var y2=0;
 var offsetx2=-500;
@@ -6,10 +8,13 @@ var x=100;
 var y=100;
 var dx=1;
 var dy=1;
+var dx2=1;
+var dy2=1;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
 function getMousePos(canvas, evt) {
+     
     var rect = c.getBoundingClientRect();
     return {
         x: (evt.clientX - rect.left) / (rect.right - rect.left) * canvas.width,
@@ -17,10 +22,44 @@ function getMousePos(canvas, evt) {
     };
 }
 
+function draw3()
+{
+    x3+=dx2;
+    y3+=dy2;
+ 
+    
+    if (x3 > c.width || x3 < 0 ){  
+         dx2*=-1;
+         
+    
+    console.log(dx)
+        console.log("out of bounds (horizontal)")
+    }
+    
+    if (y3 > c.height || y3 < 0){
+        dy2*=-1;
+         console.log(dy)
+        console.log("out of bbounds (vertical)")
+    }
+    
+ 
+  ctx.beginPath();
+  ctx.fillStyle="#71f442";
+  // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
+  ctx.arc(x3,y3,20,0,Math.PI*2,true);
+  ctx.closePath();
+  ctx.fill();
+
+ // x+=dx;
+  //y+=dy;
+    
+  
+}
+
  c.addEventListener('mousemove', function(evt) {
         var mousePos = getMousePos(c, evt);
         var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-        console.log(message);
+        //console.log(message);
         
         x2 = mousePos.x; 
         y2 = mousePos.y;
@@ -84,6 +123,7 @@ function drawAll()
     context.clearRect(0,0, 300,300);
     draw2();
     draw();
+    draw3();
 }
 
 function draw2()
@@ -98,6 +138,7 @@ function draw2()
   //y2+=dy;
   
 }
+
 
 //1
 
