@@ -2,14 +2,22 @@ html{
     background: black;
 }
 table{
-    color: red;
+   
+     padding: 15px 32px;
+    border: groove;
+    width: 50%;
+    height: 100%;
+    top: 40%;
+    color: white;
+     margin-left:auto; 
+    margin-right:auto;
+   
+    text-align: center;
 }
 .w3-wide{
-    color:red;
+    color:white;
 }
 .w3-opacity{
-    color:red;
+    color:white;
 }
-.w3-bar w3-black{
-    color:red;
-}
+
