@@ -11,7 +11,9 @@ var dy=1;
 var dx2=1;
 var dy2=1;
 var c = document.getElementById("myCanvas");
+var something = Math.PI*2;
 var ctx = c.getContext("2d");
+var colooor = "red";
 
 function getMousePos(canvas, evt) {
      
@@ -21,6 +23,27 @@ function getMousePos(canvas, evt) {
         y: (evt.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height
     };
 }
+
+
+function CollisionCheck(){
+    
+    var cx = (x2 + something) - (x3 + something);
+    
+    var cy = (y2 + something) - (y3 + something);
+              
+    var distance = Math.sqrt(cx * cx + cy * cy);
+    
+    if (distance < something + something) {
+        // collision detected!
+        colooor =  "green";
+         dx2*=-1;
+         dy2*=-1;
+    } else {
+        // no collision
+        colooor = "red"; 
+    }
+}
+
 
 function draw3()
 {
@@ -46,7 +69,7 @@ function draw3()
   ctx.beginPath();
   ctx.fillStyle="#71f442";
   // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-  ctx.arc(x3,y3,10,0,Math.PI*2,true);
+  ctx.arc(x3,y3,10,0,something,true);
   ctx.closePath();
   ctx.fill();
 
@@ -90,7 +113,7 @@ document.addEventListener("mousemove", handler);
 ctx.beginPath();
     ctx.fillStyle="#0000ff";
     // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-    ctx.arc(100,100,20,0,Math.PI*2,true); ctx.closePath();
+    ctx.arc(100,100,20,0,something,true); ctx.closePath();
     ctx.fill();
 
 
@@ -108,7 +131,7 @@ function draw()
   ctx.beginPath();
   ctx.fillStyle="#0000ff";
   // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-  ctx.arc(x,y,20,0,Math.PI*2,true);
+  ctx.arc(x,y,20,0,something,true);
   ctx.closePath();
   ctx.fill();
   x+=dx;
@@ -121,17 +144,18 @@ function draw()
 function drawAll()
 {
     context.clearRect(0,0, 300,300);
-    draw2();
+    drawplayer();
     draw();
     draw3();
+     CollisionCheck();
 }
 
-function draw2()
+function drawplayer()
 {
   ctx.beginPath();
-  ctx.fillStyle="#f44242";
+  ctx.fillStyle= colooor;
   // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-  ctx.arc(x2,y2,10,0,Math.PI*2,true);
+  ctx.arc(x2,y2,10,0,something,true);
   ctx.closePath();
   ctx.fill();
 //x2+=dx;
