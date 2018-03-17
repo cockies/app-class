@@ -5,6 +5,7 @@
     <meta charset = "utf-8">
      <title>Basic Page</title>
        <link rel = "stylesheet" type = "text/css" href = "css.css">
+       <link rel = "stylesheet" type = "text/css" href = "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
          
             <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
             <!-- Latest compiled and minified CSS -->
@@ -18,35 +19,25 @@
     </head>
 <body>
     
-    
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="23.html">Contact <i class="ion-android-mail"></i>
+        
+      </a><button onclick="myFunctionTwo()" class ="signup pull-right"  type="button">View your highscore</button>
+    </div>
+  </div>
+</nav>
     
     
    
     
     
-    <div class ="form">
-        
     
-    <button onclick="myFunctionTwo()" class ="signup" type="button">View your highscore</button>
-    <br>
-    </div>
     <canvas id="myCanvas"></canvas>
     
     
-     <div class="dropup">
-  
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropup
-    <span class="caret"></span>
-  </button>
-        
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="homepage.html">Leaderboards</a></li>
-    <li><a href="23.html">Contact</a></li>
-  </ul>
-        
-        
-</div>
+     
     
     <script src = "script.js"></script>
     </body>

@@ -1,6 +1,6 @@
-html{
-    background: aqua;
-}
+
+
+
 .login {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -60,12 +60,5 @@ input{
     font-size: 20px;
     margin: 10px;
 
-}
-.form{
-    background-color: aqua;
-    }
-.dropup{
-    background-color: aqua;
-    
 }
 
